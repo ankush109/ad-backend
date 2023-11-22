@@ -1,5 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const cors = require("cors");
+
 const errorMiddlewear = require("./middlewares/error");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
