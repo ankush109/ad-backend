@@ -11,7 +11,6 @@ const express = require("express");
 //     process.exit(1);
 // })
 connectdb();
-const app = express();
 app.use(
   cors({
     origin: [
