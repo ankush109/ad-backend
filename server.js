@@ -5,18 +5,11 @@ const cloudinary = require("cloudinary");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const express = require("express");
-dotenv.config({ path: "backend/config/config.env" });
 connectdb();
 app.use("/", (req, res) => {
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.send("api is running");
 });
-app.use(helmet());
-app.set("trust proxy", 1);
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(morgan("dev"));
-
 cloudinary.config({
   cloud_name: "dsd8hp9wx",
   api_key: 241217624559331,
