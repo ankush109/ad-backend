@@ -1,4 +1,4 @@
-import { default as mongoose } from "mongoose";
+const { default: mongoose } = require("mongoose");
 
 const connectdb = () => {
   mongoose
@@ -10,4 +10,4 @@ const connectdb = () => {
     });
 };
 
-export default connectdb;
+module.exports = connectdb;
